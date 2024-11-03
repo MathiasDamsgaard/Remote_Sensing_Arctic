@@ -39,20 +39,20 @@ ylabel('SIE')
 
 %% only September
 
-SIE_sep = SIE(months == 9);
-dates_sep = years(months == 9);
+SIE_sep = SIE(months == 3);
+dates_sep = years(months == 3);
 
 % Fit the data
 mdl_sep = fitlm(dates_sep,SIE_sep);
-a2 = mdl_sep.Coefficients.Estimate(2)% slope
-b2 = mdl_sep.Coefficients.Estimate(1)% intercept
-
+a2 = mdl_sep.Coefficients.Estimate(2);% slope
+b2 = mdl_sep.Coefficients.Estimate(1);% intercept
+disp(b2)
 figure(2)
 plot(dates_sep,SIE_sep,'r') ;
 hold on
 plot(dates_sep,a2*dates_sep+b2,'black')
 hold off
-title('SIE NH September, Slope (km2/year) = ',a2)
+title('SIE NH March, Slope (km2/year) = ',a2)
 xlim([1978,2023])
 xlabel('Time')
 ylabel('SIE')
