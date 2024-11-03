@@ -44,8 +44,8 @@ dates_sep = years(months == 9);
 
 % Fit the data
 mdl_sep = fitlm(dates_sep,SIE_sep);
-a2 = mdl_sep.Coefficients.Estimate(2);% slope
-b2 = mdl_sep.Coefficients.Estimate(1);% intercept
+a2 = mdl_sep.Coefficients.Estimate(2)% slope
+b2 = mdl_sep.Coefficients.Estimate(1)% intercept
 
 figure(2)
 plot(dates_sep,SIE_sep,'r') ;
@@ -80,7 +80,8 @@ expected_SIE = a2*dates_sep2+b2;
 icefree_sep = dates_sep2(expected_SIE<1*10^(6));
 icefree_sep(1)
 
-years_to_icefree=icefree_sep(1)-2023
+years_to_icefree=icefree_sep(1)-2024
+
 
 
 
