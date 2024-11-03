@@ -80,7 +80,8 @@ expected_SIE = a2*dates_sep2+b2;
 icefree_sep = dates_sep2(expected_SIE<1*10^(6));
 icefree_sep(1)
 
-years_to_icefree=icefree_sep(1)-2023
+years_to_icefree=icefree_sep(1)-2024
+
 
 
 
